@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ViTech Insurance Analytics</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="vitech.css">
+
+  </head>
+
+  <body id="page-top">
+
+      <div class="container">
+       <!--Site Logo-->
+        <br> 
+        <a href="https://vitechinc.com">
+          <img src="https://www.vitechinc.com/wordpress/wp-content/uploads/2015/10/Official-Logo-Website.jpg">
+        </a>
+      </div>
+
+    <header class="bg-primary text-white">
+      <div class="container text-center">
+        <h2>Explore Your Insurance Options</h2>
+        <p class="lead">Use intelligent data analytics to find your best plan</p>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <h1> Personalized Insurance Recommendations</h1>
+          <p> With ViTech Insurance Analytics (VIA), you can find your life insurance quote with just a few simple questions!</p> 
+          <p>Simply enter your information below, and we will provide a personalized insurance estimate.</p>
+        </div>
+      </div>
+    </section>
+<script type="text/javascript">function myFunction() {
+    var elements = document.getElementById("myForm").elements;
+    var obj ={};
+    for(var i = 0 ; i < elements.length ; i++){
+        var item = elements.item(i);
+        if (i==11){
+        }
+        obj[item.name] = item.value;
+    }
+    var fs = require('fs');
+    var json = JSON.stringify(obj);
+    fs.openFile('myjsonfile.json', json);
+    fs.writeFile('myjsonfile.json', json);
+    alert("The silver plan will work best for you!");
+    document.getElementById("myString").innerHTML = "silver";
+    document.getElementById("myText").innerHTML = "";
+
+}</script>
+    
+    <!--Form that allows the user to enter their information in order to predict their pricing.-->
+    <form id = myForm method="post" onsubmit ="return myFunction()">
+      <div class="container">
+        <h2 id="steps">Enter Your Information</h2>
+          <div class="row" id = "personal-info">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.."> <br>
+
+            <label for="lname">Last Name</label> 
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.."> <br>
+
+            <label for = "DOB"> Age </label>
+            <input type="text" id = "DOB" name="DOB" placeholder="0">
+            <img title="Use the format 'YYYY-MM-DD' when entering your date of birth." src="http://www.free-icons-download.net/images/blue-info-button-icon-50693.png" alt="information" height="20" width="20">
+            
+            <br>
+            <label for="marital_status"> What is your marital status? </label> 
+              <select id="marital_status" name="marital_status">
+               <option value="blank"></option>
+               <option value="S"> Single </option>
+               <option value="M"> Married </option>
+             </select>
+            <br>
+            <label for="gender"> What is your gender? </label> 
+              <select id="gender" name="gender">
+               <option value="blank"></option>
+               <option value="M"> Male </option>
+               <option value="F"> Female </option>
+             </select>
+             <br>
+             <label for="people_covered" > How many individuals will be covered? </label> 
+              <select id="people_covered" name="people_covered">
+               <option value="blank"></option>
+               <option value="1"> 1 </option>
+               <option value="2"> 2 </option>
+               <option value="3" > 3</option>
+               <option value="4">4</option>
+             </select>
+
+            <img title="Enter the number of all individuals on the insurance plan, including yourself." src="http://www.free-icons-download.net/images/blue-info-button-icon-50693.png" alt="information" height="20" width="20"> 
+            <br>
+          </div>
+
+          <div class="row" id="personal-info">
+            <label for ="state"> State </label>
+            <input type="text" id="lname" name="state" placeholder="The state you live in"> 
+            <img title="Use the whole, nonabbreviated word for your state." src="http://www.free-icons-download.net/images/blue-info-button-icon-50693.png" alt="information" height="20" width="20">
+            <br>
+             <label>What is your latitude and longitude? If you do not know your exact location, click <a href="https://www.maps.ie/coordinates.html" target="_blank"> here</a>. (Only whole numbers are accepted.) </label> 
+            <br>
+            <label for ="latitude">Latitude</label>
+            <input type="text" name="latitude" placeholder="0"> 
+    
+            <label for="longitude">Longitude</label>
+            <input type="text" name="longitude" placeholder="0"> <br>
+
+            <label for="tobacco"> Do you smoke or otherwise ingest tobacco or tobacco products? </label>
+            <select id="tobacco" name="tobacco">
+                <option value="blank"></option>
+                <option value="Yes"> Yes </option>
+                <option value="No"> No </option>
+            </select>
+            <br>
+
+            <label for="optional_insured"> Additional Insurance Requested</label>
+            <input type="text" name="additional_insured" placeholder="0">  <br>
+
+            <label for"annual_income"> What is your annual income? </label>
+            <input type="text" name="annual_income" placeholder="0">  <br>
+
+            <a id="button"><input type="submit" value="Submit" ></a>
+
+          </div>
+        <p>Based on our analysis, we recommend that you purchase the silver plan.</p>
+      </div>
+    </form>
+<script>
+   
+    </script>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; ViTech Analytics</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+
+</html>

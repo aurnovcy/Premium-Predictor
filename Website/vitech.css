@@ -1,0 +1,55 @@
+#page-top {
+	background-color: rgba(0, 121, 178, 0.2);
+	font-family: "Lucida Sans Unicode";
+}
+
+#options {
+	font-size: 30px;
+	text-orientation: center;
+	color: white;
+	background-color: rgba(0, 121, 178,0.4);
+	padding: 20px;
+}
+#personal-info {
+	padding-left: 10px;
+}
+#health-issues {
+	margin-left: 10px;
+}
+#steps {
+	font-size: 30px;
+	font-family: "Lucida Sans Unicode";
+}
+
+label {
+	font-family: "Verdana";
+}
+#banner {
+	align-content: center;
+}
+
+#menu {
+	font-size: 20px;
+	list-style: none;
+}
+th {
+	font-size: 30px;
+	color:white;
+	text-align: center;
+}
+td {
+	font-size: 40px;
+	color: white;
+	text-align: center;
+}
+li {
+	text-align: right;
+}
+
+#button a:hover { 
+  opacity:1;
+}
+#navbarResponsive {
+	float:right;
+	margin-top: 60px;
+}
